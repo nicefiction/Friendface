@@ -10,7 +10,8 @@ struct ContentView: View {
    
    // MARK: - PROPERTY WRAPPERS -
    
-   @State private var users = Array<UserModel>()
+   @ObservedObject var friendFaceDataModel: FriendFaceDataModel = FriendFaceDataModel()
+   // @State private var users = Array<UserModel>()
    
    
    
@@ -20,14 +21,15 @@ struct ContentView: View {
       
       NavigationView {
          List {
-            ForEach(users, id: \.id) { (user: UserModel) in
-               NavigationLink(destination: UserDetailView(user: user)) {
+            ForEach(friendFaceDataModel.users, id: \.id) { (user: UserModel) in
+               NavigationLink(destination: UserDetailView(user: user,
+                                                          users: friendFaceDataModel.users)) {
                   HStack {
                      Text(user.name)
                         .font(.headline)
                         .fontWeight(.semibold)
                      Spacer()
-                     Text("Age: \(user.age)")
+                     Text("\(user.friends.count) friends")
                   }
                }
             }
@@ -71,7 +73,7 @@ struct ContentView: View {
                /// `4.1` We have good data , go back to the main thread :
                DispatchQueue.main.async {
                   /// `4.2` Update our UI :
-                  self.users = _decodedUsers
+                  self.friendFaceDataModel.users = _decodedUsers
                }
                /// `4.3` Everything is good , so we can exit :
                return

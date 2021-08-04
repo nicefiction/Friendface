@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		092DD0F726BAEAA800208EEC /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092DD0F626BAEAA800208EEC /* UserDetailView.swift */; };
 		092DD0FF26BB069000208EEC /* FriendDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092DD0FE26BB069000208EEC /* FriendDetailView.swift */; };
+		092DD10226BB165600208EEC /* FriendFaceDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092DD10126BB165600208EEC /* FriendFaceDataModel.swift */; };
 		097EC34C26BA9381001F0F17 /* FriendfaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097EC34B26BA9381001F0F17 /* FriendfaceApp.swift */; };
 		097EC34E26BA9381001F0F17 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097EC34D26BA9381001F0F17 /* ContentView.swift */; };
 		097EC35026BA9385001F0F17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 097EC34F26BA9385001F0F17 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		092DD0F626BAEAA800208EEC /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
 		092DD0FE26BB069000208EEC /* FriendDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailView.swift; sourceTree = "<group>"; };
+		092DD10126BB165600208EEC /* FriendFaceDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendFaceDataModel.swift; sourceTree = "<group>"; };
 		097EC34826BA9381001F0F17 /* Friendface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Friendface.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		097EC34B26BA9381001F0F17 /* FriendfaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendfaceApp.swift; sourceTree = "<group>"; };
 		097EC34D26BA9381001F0F17 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			children = (
 				097EC35E26BA956B001F0F17 /* UserModel.swift */,
 				097EC36226BA9684001F0F17 /* FriendModel.swift */,
+				092DD10126BB165600208EEC /* FriendFaceDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				097EC34C26BA9381001F0F17 /* FriendfaceApp.swift in Sources */,
 				097EC35F26BA956B001F0F17 /* UserModel.swift in Sources */,
 				092DD0FF26BB069000208EEC /* FriendDetailView.swift in Sources */,
+				092DD10226BB165600208EEC /* FriendFaceDataModel.swift in Sources */,
 				092DD0F726BAEAA800208EEC /* UserDetailView.swift in Sources */,
 				097EC36326BA9684001F0F17 /* FriendModel.swift in Sources */,
 			);

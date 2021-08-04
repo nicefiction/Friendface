@@ -11,6 +11,7 @@ struct UserDetailView: View {
    // MARK: - PROPERTIES
    
    let user: UserModel
+   var users: [UserModel]
    
    
    
@@ -18,10 +19,13 @@ struct UserDetailView: View {
    
    var body: some View {
       
-      List {
-         ForEach(user.friends) { (friend: FriendModel) in
-            NavigationLink(destination: FriendDetailView(friend: friend)) {
-               Text(friend.name)
+      VStack {
+         List {
+            ForEach(user.friends) { (friend: FriendModel) in
+               NavigationLink(destination: FriendDetailView(friend: friend,
+                                                            user: user)) {
+                  Text(friend.name)
+               }
             }
          }
       }
@@ -40,6 +44,8 @@ struct UserDetailView_Previews: PreviewProvider {
 
    // MARK: - PROPERTIES
 
+   static var friendFaceFataModelExample = FriendFaceDataModel()
+   static var exampleUsers = friendFaceFataModelExample.users
    static let exampleUser = UserModel(id: "eccdf4b8-c9f6-4eeb-8832-28027eb70155",
                                       isActive: true,
                                       name: "Gale Dyer",
@@ -63,6 +69,7 @@ struct UserDetailView_Previews: PreviewProvider {
 
    static var previews: some View {
 
-      UserDetailView(user: exampleUser)
+      UserDetailView(user: exampleUser,
+                     users: exampleUsers)
    }
 }
