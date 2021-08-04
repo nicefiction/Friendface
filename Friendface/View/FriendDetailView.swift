@@ -12,16 +12,39 @@ struct FriendDetailView: View {
    
    var friend: FriendModel
    var user: UserModel
-   
+   var users: [UserModel]
+
    
    
    // MARK: - COMPUTED PROPERTIES -
    
+   var userFriend: UserModel {
+      
+      findFriend(in: users)
+   }
+   
+   
    var body: some View {
       
-      Text("Hello, my name is \(friend.name). \nI am a friend of \(user.name).")
-         .navigationBarTitle(friend.name,
-                             displayMode: .inline)
+      Text("Hello, my name is \(friend.name). \nI am a friend of \(user.name). I have \(userFriend.friends.count) friends.")
+            .navigationBarTitle(friend.name,
+                                displayMode: .inline)
+   }
+   
+   
+   
+   // MARK: - METHODS -
+   
+   func findFriend(in users: [UserModel])
+   -> UserModel {
+      
+      guard let _friendUser = users.first(where: { (user: UserModel) in
+         user.id == friend.id
+      }) else {
+         return user
+      }
+      
+      return _friendUser
    }
 }
 
@@ -35,6 +58,8 @@ struct FriendDetailView_Previews: PreviewProvider {
    
    // MARK: - STATIC PROPERTIES -
    
+   static var friendFaceFataModelExample = FriendFaceDataModel()
+   static var exampleUsers = friendFaceFataModelExample.users
    static var exampleFriend: FriendModel = FriendModel(id: "1", name: "Dorothy")
    static let exampleUser = UserModel(id: "eccdf4b8-c9f6-4eeb-8832-28027eb70155",
                                       isActive: true,
@@ -58,6 +83,7 @@ struct FriendDetailView_Previews: PreviewProvider {
    static var previews: some View {
       
       FriendDetailView(friend: exampleFriend,
-                       user: exampleUser)
+                       user: exampleUser,
+                       users: exampleUsers)
    }
 }

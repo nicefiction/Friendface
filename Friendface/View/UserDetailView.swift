@@ -23,7 +23,8 @@ struct UserDetailView: View {
          List {
             ForEach(user.friends) { (friend: FriendModel) in
                NavigationLink(destination: FriendDetailView(friend: friend,
-                                                            user: user)) {
+                                                            user: user,
+                                                            users: users)) {
                   Text(friend.name)
                }
             }
@@ -62,7 +63,6 @@ struct UserDetailView_Previews: PreviewProvider {
                                       ])
 
 
-   
    
 
    // MARK: - COMPUTED PROPERTIES
