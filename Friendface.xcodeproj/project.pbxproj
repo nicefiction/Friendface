@@ -7,19 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		092DD0F726BAEAA800208EEC /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092DD0F626BAEAA800208EEC /* UserDetailView.swift */; };
 		097EC34C26BA9381001F0F17 /* FriendfaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097EC34B26BA9381001F0F17 /* FriendfaceApp.swift */; };
 		097EC34E26BA9381001F0F17 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097EC34D26BA9381001F0F17 /* ContentView.swift */; };
 		097EC35026BA9385001F0F17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 097EC34F26BA9385001F0F17 /* Assets.xcassets */; };
 		097EC35326BA9385001F0F17 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 097EC35226BA9385001F0F17 /* Preview Assets.xcassets */; };
+		097EC35F26BA956B001F0F17 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097EC35E26BA956B001F0F17 /* UserModel.swift */; };
+		097EC36326BA9684001F0F17 /* FriendsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097EC36226BA9684001F0F17 /* FriendsModel.swift */; };
+		097EC37026BAD44E001F0F17 /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 097EC36F26BAD44E001F0F17 /* users.json */; };
+		097EC37B26BADD39001F0F17 /* Bundle+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097EC37A26BADD39001F0F17 /* Bundle+Decodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		092DD0F626BAEAA800208EEC /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
 		097EC34826BA9381001F0F17 /* Friendface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Friendface.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		097EC34B26BA9381001F0F17 /* FriendfaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendfaceApp.swift; sourceTree = "<group>"; };
 		097EC34D26BA9381001F0F17 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		097EC34F26BA9385001F0F17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		097EC35226BA9385001F0F17 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		097EC35426BA9385001F0F17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		097EC35E26BA956B001F0F17 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		097EC36226BA9684001F0F17 /* FriendsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsModel.swift; sourceTree = "<group>"; };
+		097EC36F26BAD44E001F0F17 /* users.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
+		097EC37A26BADD39001F0F17 /* Bundle+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Decodable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +63,9 @@
 			isa = PBXGroup;
 			children = (
 				097EC34B26BA9381001F0F17 /* FriendfaceApp.swift */,
-				097EC34D26BA9381001F0F17 /* ContentView.swift */,
+				097EC36E26BAD436001F0F17 /* Data */,
+				097EC35D26BA9553001F0F17 /* Model */,
+				097EC35B26BA9535001F0F17 /* View */,
 				097EC34F26BA9385001F0F17 /* Assets.xcassets */,
 				097EC35426BA9385001F0F17 /* Info.plist */,
 				097EC35126BA9385001F0F17 /* Preview Content */,
@@ -67,6 +79,33 @@
 				097EC35226BA9385001F0F17 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		097EC35B26BA9535001F0F17 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				097EC34D26BA9381001F0F17 /* ContentView.swift */,
+				092DD0F626BAEAA800208EEC /* UserDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		097EC35D26BA9553001F0F17 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				097EC35E26BA956B001F0F17 /* UserModel.swift */,
+				097EC36226BA9684001F0F17 /* FriendsModel.swift */,
+				097EC37A26BADD39001F0F17 /* Bundle+Decodable.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		097EC36E26BAD436001F0F17 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				097EC36F26BAD44E001F0F17 /* users.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +167,7 @@
 			files = (
 				097EC35326BA9385001F0F17 /* Preview Assets.xcassets in Resources */,
 				097EC35026BA9385001F0F17 /* Assets.xcassets in Resources */,
+				097EC37026BAD44E001F0F17 /* users.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,7 +179,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				097EC34E26BA9381001F0F17 /* ContentView.swift in Sources */,
+				097EC37B26BADD39001F0F17 /* Bundle+Decodable.swift in Sources */,
 				097EC34C26BA9381001F0F17 /* FriendfaceApp.swift in Sources */,
+				097EC35F26BA956B001F0F17 /* UserModel.swift in Sources */,
+				092DD0F726BAEAA800208EEC /* UserDetailView.swift in Sources */,
+				097EC36326BA9684001F0F17 /* FriendsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
